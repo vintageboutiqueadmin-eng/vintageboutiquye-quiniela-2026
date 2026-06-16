@@ -199,7 +199,11 @@ Error generating stack: `+l.message+`
 .q26 .liverow { display:flex; align-items:center; gap:8px; font-size:13.5px; padding:4px 0; flex-wrap:wrap; }
 .q26 .livescore { font-family:'Barlow Condensed'; font-weight:800; font-size:21px; color:#fff; padding:0 4px; }
 .q26 .liveclock { margin-left:auto; color:#ff8da1; font-weight:700; font-size:12px; animation:pulso 1.6s infinite; }
-.q26 .res-live { border-color:#E4022D; box-shadow:0 0 12px rgba(228,2,45,.45); animation:pulso 1.8s infinite; }
+.q26 .res-live { position:relative; border:none; padding:8px 16px; background:#07091a; border-radius:10px; }
+.q26 .res-live::before { content:""; position:absolute; inset:-3px; border-radius:13px; padding:3px;
+  background:linear-gradient(90deg,#E4022D 0%,#1D6FF2 50%,#00A95C 100%);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor; mask-composite:exclude; pointer-events:none; }
 .q26 .bracket { display:flex; gap:6px; padding:6px 0 16px; align-items:stretch; }
 .q26 .bcolwrap { display:flex; flex-direction:column; flex:1 1 0; min-width:0; }
 .q26 .bcw-final { flex:1.25 1 0; }
